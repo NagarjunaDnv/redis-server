@@ -1,0 +1,9 @@
+rootProject.name = 'redis-server'
+
+if (new File('../resp').exists()) {
+    includeBuild('../resp') {
+        dependencySubstitution {
+            substitute module('org.example:resp') using project(':')
+        }
+    }
+}

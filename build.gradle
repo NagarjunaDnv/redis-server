@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.example:resp:1.0-SNAPSHOT'
+    implementation 'com.hrakaroo:glob:0.9.0'
+    // Jackson Core
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.13.0'
+    // Jackson Databind
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
